@@ -2,7 +2,7 @@
 #include <math.h>
 int is_zero(double a)
 {
-	const double eps = 0.00000001;
+	const double eps = 2.2204460492503131E-16;
 	return (fabs (a) < eps);
 }
 
