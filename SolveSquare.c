@@ -3,7 +3,7 @@
 int is_zero(double a)
 {
 	const double eps = 0.00000001;
-	return (fabs(a) < eps);
+	return (fabs (a) < eps);
 }
 
 int SolveLinear(double b, double c, double *x) // returns 2, if number of radicals is infinity
