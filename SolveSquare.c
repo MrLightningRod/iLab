@@ -9,9 +9,9 @@ int is_zero(double a)
 int SolveLinear(double b, double c, double *x) // returns 2, if number of radicals is infinity
 {
 	int quantity;
-	if (is_zero(b))
+	if (is_zero (b))
 	{
-		if (is_zero(c))
+		if (is_zero (c))
 		{
 			quantity = 2;
 		}
@@ -31,10 +31,10 @@ int SolveLinear(double b, double c, double *x) // returns 2, if number of radica
 int SolveSquare(double a, double b, double c, double *x1, double *x2) // returns 3, if number of radicals is infinity
 {
 	int quantity;
-	if (is_zero(a))
+	if (is_zero (a))
 	{
 		int Linear_Quantity;
-		Linear_Quantity = SolveLinear(b, c, x1);
+		Linear_Quantity = SolveLinear (b, c, x1);
 		if (Linear_Quantity > 1)
 		{
 			quantity = 3;
@@ -48,10 +48,10 @@ int SolveSquare(double a, double b, double c, double *x1, double *x2) // returns
 	{
 		double d;
 		d = b * b - 4 * a * c;
-		if (is_zero(d))
+		if (is_zero (d))
 		{
 			quantity = 1;
-			*x1 = -b / 2 / a;
+			*x1 = - b / 2 / a;
 		}
 		else
 		{
@@ -62,16 +62,16 @@ int SolveSquare(double a, double b, double c, double *x1, double *x2) // returns
 			else
 			{
 				quantity = 2;
-				*x1 = (-b - sqrt(d)) / 2 / a;
-				*x2 = (-b + sqrt(d)) / 2 / a;
+				*x1 = (- b - sqrt(d)) / 2 / a;
+				*x2 = (- b + sqrt(d)) / 2 / a;
 			}
 		}
 	}
-	if (is_zero(*x1))
+	if (is_zero (*x1))
 	{
 		*x1 = 0;
 	}
-	if (is_zero(*x2))
+	if (is_zero (*x2))
 	{
 		*x2 = 0;
 	}
@@ -82,15 +82,15 @@ int main()
 {
 	double a, b, c, x1, x2;
 	int quantity;
-	scanf("%lg %lg %lg", &a, &b, &c);
-	quantity = SolveSquare(a, b, c, &x1, &x2);
+	scanf ("%lg %lg %lg", &a, &b, &c);
+	quantity = SolveSquare (a, b, c, &x1, &x2);
 	switch (quantity)
 	{
 	case 0:
-		printf("NO");
+		printf ("NO");
 		break;
 	case 1:
-		printf("%lg", x1);
+		printf ("%lg", x1);
 		break;
 	case 2:
 		if (x1 > x2)
@@ -99,10 +99,10 @@ int main()
 			x2 = x1;
 			x1 = a;
 		}
-		printf("%lg %lg", x1, x2);
+		printf ("%lg %lg", x1, x2);
 		break;
 	case 3:
-		printf("R");
+		printf ("R");
 		break;
 	}
 	return 0;
