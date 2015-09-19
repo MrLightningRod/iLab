@@ -28,7 +28,7 @@ int SolveLinear(double b, double c, double *x) // returns 2, if number of radica
 	return quantity;
 }
 
-int SolveSquare(double a, double b, double c, double *x1, double *x2)// returns 3, if number of radicals is infinity
+int SolveSquare(double a, double b, double c, double *x1, double *x2) // returns 3, if number of radicals is infinity
 {
 	int quantity;
 	if (is_zero(a))
