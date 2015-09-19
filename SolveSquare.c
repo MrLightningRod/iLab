@@ -22,7 +22,7 @@ int SolveLinear(double b, double c, double *x) // returns 2, if number of radica
 	}
 	else
 	{
-		*x = -c / b;
+		*x = - c / b;
 		quantity = 1;
 	}
 	return quantity;
