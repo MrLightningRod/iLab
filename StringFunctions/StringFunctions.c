@@ -222,6 +222,11 @@ double OneMoreStrtod(const char *string, char **endptr)
 		else if ((*string == '-') || (*string == '+'))
 		{
 			if (!was_E) break;
+			if (was_E_digit)
+			{
+				string--;
+				break;
+			}
 			if (was_E_sign)
 			{
 				string -= 2;
