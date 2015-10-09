@@ -99,7 +99,8 @@ int main()
 
 int Is_Alpha(char ch)
 {
-	return ((('a' <= ch) && (ch <= 'z')) || (('à' <= ch) && (ch <= 'ÿ')) || (('A' <= ch) && (ch <= 'Z')) || (('À' <= ch) && (ch <= 'ß')));
+	return ((('a' <= ch) && (ch <= 'z')) || (('à' <= ch) && (ch <= 'ÿ')) /
+		|| (('A' <= ch) && (ch <= 'Z')) || (('À' <= ch) && (ch <= 'ß')));
 }
 
 char To_Upper(char ch)
