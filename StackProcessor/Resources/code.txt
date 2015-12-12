@@ -1,0 +1,14 @@
+in
+in
+add
+in
+in
+add
+pop 1
+pushfrom 1
+cmp
+jne 1 this
+push -1
+out
+label this
+finish
